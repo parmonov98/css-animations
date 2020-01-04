@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS3 ripple button</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button class="btn ripple-btn">
+ripple me
+<div class="rippling-effect"></div>
+    </button>
+    <a href="#" class="btn ripple-btn">
+ripple me too
+<div class="rippling-effect"></div>
+    </a>
+
+    <script>
+
+    const rbtns = document.querySelectorAll('.ripple-btn');
+
+    rbtns.forEach(btn => {
+        btn.addEventListener('click', function (e) {
+            console.log(e.target.offsetWidth);
+            console.log(e.target);
+            e.target.querySelector('.rippling-effect').style.top = e.offsetY + `px`;
+            e.target.querySelector('.rippling-effect').style.left = e.offsetX + `px`;
+            e.target.querySelector('.rippling-effect').style.animationName = 'rippleBtn';
+            setTimeout(function () {
+                e.target.querySelector('.rippling-effect').style.animationName = '';
+            }, 300)
+            e.preventDefault();
+        });
+    });
+
+    </script>
+
+</body>
+</html>

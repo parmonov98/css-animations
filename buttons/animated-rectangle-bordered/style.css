@@ -1,0 +1,84 @@
+body{
+    background: #333;
+}
+
+.border-running-button{
+    display: inline-block;
+    overflow: hidden;
+    padding: 10px 12px;
+    margin: 100px; /* you can remove on your project*/
+    font-size: 2em;
+    background-color: #202097;
+    transition: .5s;
+    border: 0;
+    outline: 0;
+    position: relative;
+}
+.border-running-button:hover{
+    box-shadow: 0 0 20px 15px #132789;
+    color: #fff;
+    transition-delay: 1s;
+}
+
+.border-running-button > span{
+    position: absolute;
+    display: inline-block;
+    
+}
+.border-running-button > span:nth-child(1){
+    height: 5px;
+    background: linear-gradient(90deg, transparent, yellow);
+    width: 100%;
+    top: 0px;
+    left: -100%;
+    transition: .25s;
+}
+
+
+.border-running-button > span:nth-child(2){
+    
+    width: 5px;
+    background: linear-gradient(180deg, transparent, yellow);
+    height: 100%;
+    top: -100%;
+    left: 98%;
+    transition: .25s;
+    transition-delay: .25s;
+}
+
+.border-running-button > span:nth-child(3){
+    height: 5px;
+    background: linear-gradient(270deg, transparent, yellow);
+    width: 100%;
+    bottom: 0px;
+    left: 100%;
+    transition: .3s;
+    transition-delay: .5s;
+}
+
+
+.border-running-button > span:nth-child(4){
+    width: 5px;
+    background: linear-gradient(180deg, transparent, yellow);
+    height: 100%;
+    top: 100%;
+    left: 0%;
+    transition: .25s;
+    transition-delay: .75s;
+}
+
+
+.border-running-button:hover span:nth-child(1){
+    left: 100%;
+}
+
+.border-running-button:hover span:nth-child(2){
+    top: 100%;
+}
+
+.border-running-button:hover span:nth-child(3){
+    left: -100%;
+}
+.border-running-button:hover span:nth-child(4){
+    top: -100%;
+}

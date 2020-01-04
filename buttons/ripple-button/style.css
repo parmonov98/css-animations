@@ -1,0 +1,38 @@
+.btn{
+    padding: 25px 28px;
+    display: inline-block;
+    border: 1px solid #cec;
+    background-color: rgb(8, 83, 15);
+    font-size: 32px;
+    color: #fff;
+}
+.btn:focus{
+    border: 1px solid #5c9;
+    outline: 0;
+}
+.ripple-btn{
+    overflow: hidden;
+    position: relative;
+}
+
+.rippling-effect{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.btn:focus .rippling-effect{
+    animation-duration: 1s;
+}
+
+@keyframes rippleBtn{
+    from{
+        display: inline-block !important;
+        background-color: #fff;
+        transform: scale(1);
+    }
+    to{
+        transform: scale(20);
+    }
+}
