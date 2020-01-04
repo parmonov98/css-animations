@@ -17,8 +17,8 @@
 
 .rippling-effect{
     position: absolute;
-    width: 30px;
-    height: 30px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
 }
 
@@ -33,6 +33,6 @@
         transform: scale(1);
     }
     to{
-        transform: scale(20);
+        transform: scale(50);
     }
 }
